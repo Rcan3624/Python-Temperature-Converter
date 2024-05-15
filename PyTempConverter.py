@@ -25,7 +25,7 @@ def easterEggs(option):
         temperature = -32 # Set the Fahrenheit temperature to -32
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile('EasterEggs\ColdAsIce.ogg')
+        os.startfile('EasterEggs\coldasice.ogg')
         input("Press enter to continue")
         main()
 
