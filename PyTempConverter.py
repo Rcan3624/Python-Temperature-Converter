@@ -1,5 +1,5 @@
-
-import os
+import os              # Open files for Windows
+import subprocess, sys # Open files for Linux
 
 # Display the program name and instructions when the program is started. This will not be displayed again while the program is running.
 print("Python Temperature Conversion \n Written by Ryan Cannon")
@@ -15,17 +15,23 @@ def easterEggs(option):
         temperature = 103  # Set the Fahrenheit temperature to 103
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile('EasterEggs\hotblooded.ogg')
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\hotblooded.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/hotblooded.ogg'])
         input("Press enter to continue")
         main()
 
     # Foreigner - Cold As Ice
     elif (option == "cold as ice") or (option == "you're as cold as ice"):
         print("♪ You're willing to sacrifice our love ♪")
-        temperature = -32 # Set the Fahrenheit temperature to -32
+        temperature = 32 # Set the Fahrenheit temperature to 32
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile('EasterEggs\ColdAsIce.ogg')
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\coldasice.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/coldasice.ogg'])
         input("Press enter to continue")
         main()
 
@@ -35,7 +41,10 @@ def easterEggs(option):
         temperature = -10 # Set the Fahrenheit temperature to -10
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile("EasterEggs\snowmiser.ogg")
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\snowmiser.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/snowmiser.ogg'])
         input("Press enter to continue")
         main()
 
@@ -45,7 +54,23 @@ def easterEggs(option):
         temperature = 101 # Set the Fahrenheit temperature to 101
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile("EasterEggs\heatmiser.ogg")
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\heatmiser.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/heatmiser.ogg'])
+        input("Press enter to continue")
+        main()
+
+    # Mr Freeze from Batman & Robin
+    elif (option == "mr freeze") or (option == "winter has come at last"):
+        print("The Iceman cometh!")
+        temperature = 23 # Set the Fahrenheit temperature to 23
+        unitSymbol = "°F"
+        print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\mrfreeze.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/mrfreeze.ogg'])
         input("Press enter to continue")
         main()
 
@@ -53,7 +78,19 @@ def easterEggs(option):
     # I couldn't help it
     elif (option == "what is the temperature of the sun") or (option == "vegeta, what does the thermometer say about the temperature of the sun?"):
         print("It's over 9000!")
-        os.startfile("EasterEggs\over9000.ogg")
+        temperature = 10000 # Set the Fahrenheit temperature to 10,000
+        unitSymbol = "°F"
+        print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\over9000.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/over9000.ogg'])
+        input("Press enter to continue")
+        main()
+
+    # Some crappy 90s rapper
+    elif (option == "ice ice baby") or (option == "i'm ice ice baby"):
+        print("Did you mean: Trash")
         input("Press enter to continue")
         main()
 
