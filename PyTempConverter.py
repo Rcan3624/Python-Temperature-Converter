@@ -15,6 +15,8 @@ def easterEggs(option):
         temperature = 103  # Set the Fahrenheit temperature to 103
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+
+        # Check if the user is running the program on Windows or Linux
         if sys.platform.startswith('win32'):
             os.startfile('EasterEggs\hotblooded.ogg')
         else:
@@ -28,7 +30,12 @@ def easterEggs(option):
         temperature = 32 # Set the Fahrenheit temperature to 32
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        os.startfile('EasterEggs\ColdAsIce.ogg')
+
+        # Check if the user is running the program on Windows or Linux
+        if sys.platform.startswith('win32'):
+            os.startfile('EasterEggs\coldasice.ogg')
+        else:
+            subprocess.Popen(["open", 'EasterEggs/coldasice.ogg'])
         input("Press enter to continue")
         main()
 
@@ -38,6 +45,8 @@ def easterEggs(option):
         temperature = -10 # Set the Fahrenheit temperature to -10
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+
+        # Check if the user is running the program on Windows or Linux
         if sys.platform.startswith('win32'):
             os.startfile('EasterEggs\snowmiser.ogg')
         else:
@@ -51,6 +60,8 @@ def easterEggs(option):
         temperature = 101 # Set the Fahrenheit temperature to 101
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+
+        # Check if the user is running the program on Windows or Linux
         if sys.platform.startswith('win32'):
             os.startfile('EasterEggs\heatmiser.ogg')
         else:
@@ -64,6 +75,8 @@ def easterEggs(option):
         temperature = 23 # Set the Fahrenheit temperature to 23
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+
+        # Check if the user is running the program on Windows or Linux
         if sys.platform.startswith('win32'):
             os.startfile('EasterEggs\mrfreeze.ogg')
         else:
@@ -78,6 +91,8 @@ def easterEggs(option):
         temperature = 10000 # Set the Fahrenheit temperature to 10,000
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
+
+        # Check if the user is running the program on Windows or Linux
         if sys.platform.startswith('win32'):
             os.startfile('EasterEggs\over9000.ogg')
         else:
