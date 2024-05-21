@@ -28,10 +28,7 @@ def easterEggs(option):
         temperature = 32 # Set the Fahrenheit temperature to 32
         unitSymbol = "°F"
         print("The Temperature in Fahrenheit is:", temperature, unitSymbol)
-        if sys.platform.startswith('win32'):
-            os.startfile('EasterEggs\coldasice.ogg')
-        else:
-            subprocess.Popen(["open", 'EasterEggs/coldasice.ogg'])
+        os.startfile('EasterEggs\ColdAsIce.ogg')
         input("Press enter to continue")
         main()
 
